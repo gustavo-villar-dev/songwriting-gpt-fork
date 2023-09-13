@@ -1,4 +1,4 @@
-```
+
 # SongGPT 🎵: A Fine-Tuned GPT for Songwriting
 
 ## Overview
