@@ -1,10 +1,69 @@
+```
+# SongGPT 🎵: A Fine-Tuned GPT for Songwriting
 
-# nanogpt-lecture
+## Overview
 
-Code created in the [Neural Networks: Zero To Hero](https://karpathy.ai/zero-to-hero.html) video lecture series, specifically on the first lecture on nanoGPT. Publishing here as a Github repo so people can easily hack it, walk through the `git log` history of it, etc.
+SongGPT is a fork of the popular GPT architecture, specifically fine-tuned for songwriting.
 
-NOTE: sadly I did not go too much into model initialization in the video lecture, but it is quite important for good performance. The current code will train and work fine, but its convergence is slower because it starts off in a not great spot in the weight space. Please see [nanoGPT model.py](https://github.com/karpathy/nanoGPT/blob/master/model.py) for `# init all weights` comment, and especially how it calls the `_init_weights` function. Even more sadly, the code in this repo is a bit different in how it names and stores the various modules, so it's not possible to directly copy paste this code here. My current plan is to publish a supplementary video lecture and cover these parts, then I will also push the exact code changes to this repo. For now I'm keeping it as is so it is almost exactly what we actually covered in the video.
+## Features
 
-### License
+- Generate verses, hooks, and choruses with AI-assisted creativity.
+- Choose genres, themes, or provide seed lines to guide the output.
+- Seamless integration with digital audio workstations (DAWs) via our API.
+- Collaborate in real-time with the AI for an iterative songwriting process.
 
-MIT
+## Installation
+
+```bash
+git clone https://github.com/hypothetical-username/SongGPT.git
+cd SongGPT
+pip install -r requirements.txt
+```
+
+## Usage
+
+```bash
+python songgpt.py --genre "rock" --seed "The night is young"
+```
+
+Output:
+
+```
+Verse 1:
+The night is young, and the stars are bright,
+Walking alone, feeling the breeze of the night,
+...
+
+Chorus:
+Oh, under the neon lights,
+We chase our dreams, into the night.
+...
+```
+
+## Fine-tuning
+
+If you want to fine-tune the model with your own data:
+
+1. Prepare a dataset with song lyrics in a CSV format.
+2. Use the `fine_tune.py` script:
+
+```bash
+python fine_tune.py --data_path /path/to/your/dataset.csv
+```
+## Collaboration
+
+1. Want to help improve the model or contribute to the project? Fork it!
+2. Found a bug? Raise an issue.
+3. Have ideas or feedback? Open a discussion.
+
+## License
+
+This project is under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
+
+## Disclaimer
+
+This project is not affiliated, endorsed, or sponsored by OpenAI. Use at your own risk and always remember to respect copyright laws when using generated content.
+
+```
+
+Note: Ensure you have the necessary permissions and respect copyright laws when using or distributing any generated content.
